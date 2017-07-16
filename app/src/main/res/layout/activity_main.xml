@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/headerColor">
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="@dimen/icon_size"
+            android:hint="Search"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColorHint="@color/white"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/search" />
+
+    </RelativeLayout>
+
+    <!-- User does not exsit -->
+    <LinearLayout
+        android:id="@+id/user_does_not_exist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The user called &quot;"
+            android:textColor="@color/red"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/user_not_found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&quot; does not exist"
+            android:textColor="@color/red"
+            android:textStyle="normal|bold" />
+
+    </LinearLayout>
+
+    <!-- UserList -->
+    <ListView
+        android:id="@+id/user_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:divider="@null" />
+
+</LinearLayout>
